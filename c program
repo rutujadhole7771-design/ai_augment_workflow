@@ -1,0 +1,63 @@
+#include <stdio.h>
+
+int main()
+{
+    char name[50];
+    float marks;
+    char grade;
+    
+    printf("================================\n");
+    printf("     STUDENT GRADE ASSISTANT\n");
+    printf("================================\n");
+
+    printf("Enter student name: ");
+    scanf("%s", name);
+
+    printf("Enter marks out of 100: ");
+    scanf("%f", &marks);
+
+    if (marks < 0 || marks > 100)
+    {
+        printf("Please enter marks between 0 and 100.\n");
+    }
+    else if (marks >= 90)
+    {
+        grade = 'A';
+        printf("\nExcellent performance!");
+    }
+    else if (marks >= 80)
+    {
+        grade = 'A';
+        printf("\nVery good performance!");
+    }
+    else if (marks >= 70)
+    {
+        grade = 'B';
+        printf("\nGood performance!");
+    }
+    else if (marks >= 60)
+    {
+        grade = 'C';
+        printf("\nKeep improving!");
+    }
+    else if (marks >= 50)
+    {
+        grade = 'D';
+        printf("\nMore practice is needed.");
+    }
+    else
+    {
+        grade = 'F';
+        printf("\nYou need to work harder.");
+    }
+
+    if (marks >= 0 && marks <= 100)
+    {
+        printf("\n\n----- RESULT -----\n");
+        printf("Student : %s\n", name);
+        printf("Marks   : %.2f\n", marks);
+        printf("Grade   : %c\n", grade);
+    }
+
+    return 0;
+}
